@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELVETY - Premium Skincare</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Infant:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Page Container (Centered layout over palm leaf background) -->
+    <div class="page-container">
+
+        <!-- Navbar -->
+        <header class="navbar">
+            <div class="container navbar-inner">
+                <!-- Left: VELVETY Logo -->
+                <div class="navbar-left">
+                    <a href="#" class="logo" id="logo">
+                        <span class="logo-title">VELVETY</span>
+                        <span class="logo-subtitle">Touch of elegance</span>
+                    </a>
+                </div>
+
+                <!-- Hamburger Toggle for Mobile -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" style="display: none;">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Center: Navigation Links -->
+                <nav class="navbar-center">
+                    <ul class="nav-links">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="nav-pages">
+                                Pages
+                                <svg class="dropdown-icon" width="24" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 15.6315L20.9679 10.8838L20.0321 9.11619L12 13.3685L3.9679 9.11619L3.03212 10.8838L12 15.6315Z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="nav-shop">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="nav-about">About</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Right: Account/Cart Links -->
+                <div class="navbar-right">
+                    <a href="#" class="nav-link login-btn" id="nav-login">Login</a>
+                    <a href="#" class="nav-link cart-btn" id="nav-cart">Cart (0)</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section container">
+            <div class="hero-layout">
+                <!-- Left Column: Images & Breadcrumb -->
+                <div class="hero-images-col">
+                    <div class="breadcrumb">
+                        <a href="#" class="breadcrumb-link">Home</a>
+                        <svg class="breadcrumb-separator" width="14" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                        </svg>
+                        <a href="#" class="breadcrumb-link">Shop</a>
+                        <svg class="breadcrumb-separator" width="14" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                        </svg>
+                        <span class="breadcrumb-current">Chicori</span>
+                    </div>
+                    <div class="product-main-image-container">
+                        <img src="images/chicori-main.png" alt="Chicori Protect" class="product-main-image">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="thumbnail active" onclick="changeImage(0)"><img src="images/chicori-main.png" alt="Chicori Thumbnail 1"></div>
+                        <div class="thumbnail" onclick="changeImage(1)"><img src="images/chicori-main.png" alt="Chicori Thumbnail 2"></div>
+                        <div class="thumbnail" onclick="changeImage(2)"><img src="images/chicori-main.png" alt="Chicori Thumbnail 3"></div>
+                        <div class="thumbnail" onclick="changeImage(3)"><img src="images/chicori-main.png" alt="Chicori Thumbnail 4"></div>
+                        <div class="thumbnail" onclick="changeImage(4)"><img src="images/chicori-main.png" alt="Chicori Thumbnail 5"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Product Detail Info -->
+                <div class="hero-info-col">
+                    <div class="product-header">
+                        <h1 class="product-title">Chicori</h1>
+                        <span class="badge-best-seller">Best Seller</span>
+                    </div>
+
+                    <div class="product-meta">
+                        <span class="meta-item">Protect</span>
+                        <span class="meta-divider">|</span>
+                        <span class="meta-item">Size: 50 ml</span>
+                        <span class="meta-divider">|</span>
+                        <span class="rating-stars">★★★★☆</span>
+                        <span class="rating-score">4.6</span>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="current-price">$20</span>
+                        <span class="installment-text">Or 4 easy payments of $30.00 with</span>
+                    </div>
+
+                    <div class="purchase-notification">
+                        <!-- Shopping bag SVG icon -->
+                        <svg width="14" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span>89 people have purchased this product</span>
+                    </div>
+
+                    <div class="amount-method-section">
+                        <h3 class="section-label">Amount & Method</h3>
+                        <div class="quantity-stock-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn" onclick="decreaseQty()">-</button>
+                                <span class="qty-value" id="qty-number">1</span>
+                                <button type="button" class="qty-btn" onclick="increaseQty()">+</button>
+                            </div>
+                            <span class="stock-info">Current stock: 27</span>
+                        </div>
+
+                        <div class="purchase-options">
+                            <label class="purchase-option active" id="option-one-time">
+                                <input type="radio" name="purchase_method" checked onchange="toggleOption(true)">
+                                <span class="custom-radio"></span>
+                                <span class="option-label">One time purchase</span>
+                                <span class="option-price">$20</span>
+                            </label>
+                            <label class="purchase-option" id="option-subscribe">
+                                <input type="radio" name="purchase_method" onchange="toggleOption(false)">
+                                <span class="custom-radio"></span>
+                                <span class="option-label">Subscribe 30 days</span>
+                                <span class="option-price">$16</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-add-cart" id="add-to-cart-btn">Add to Cart</button>
+                        <button class="btn-favorite" id="fav-btn">
+                            <span>Favorite</span>
+                            <!-- Bookmark SVG icon -->
+                            <svg width="14" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="tabs-container">
+                        <div class="tab-headers">
+                            <button class="tab-header active" onclick="switchTab(event, 'how-to-use')">How to use</button>
+                            <button class="tab-header" onclick="switchTab(event, 'benefit')">Benefit</button>
+                            <button class="tab-header" onclick="switchTab(event, 'ingredients')">Ingredients</button>
+                            <button class="tab-header" onclick="switchTab(event, 'return-policy')">Return Policy</button>
+                        </div>
+                        <div class="tab-contents">
+                            <div class="tab-content active" id="how-to-use">
+                                <p>We always recommend that you speak to your GP before you embark on taking any new supplements. Everyone is different and your GP is best positioned to provide specific guidance for your unique situation and support your overall wellness journey.</p>
+                                <p>1. Take 2 tablets in the morning and 2 tablets in the evening. We recommend using this supplement consistently for 90 days. Do not exceed the recommended daily intake.</p>
+                                <p>Whilst taking, consider introducing a healthy lifestyle to your daily routine to get the maximum benefits. Food supplements must not be used as a substitute for a varied and balanced diet and a healthy lifestyle.</p>
+                                <p>2. Supplemental folic acid or folate intake increases maternal folate status. Low maternal folate status is a risk factor in the development of neural tube defects in the developing foetus.</p>
+                            </div>
+                            <div class="tab-content" id="benefit">
+                                <p>This organic formula supports your daily wellness routine, delivering essential nutrients that help to strengthen the skin's natural barriers and protect against environmental elements. Experience revitalized energy and smooth, balanced skin with consistent daily use.</p>
+                            </div>
+                            <div class="tab-content" id="ingredients">
+                                <p>Active ingredients include organic Chicory extract, natural folates, vital vitamins, zinc, and organic binders. Free from artificial fillers, dairy, gluten, and animal-derived ingredients. 100% vegan friendly.</p>
+                            </div>
+                            <div class="tab-content" id="return-policy">
+                                <p>We offer a 30-day money-back guarantee if you are not fully satisfied with your purchase. Items must be returned in their original packaging. Return shipping costs are covered by the customer unless the product arrived damaged.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simple Interactive Script for tabs, radios, quantity selector -->
+        <script>
+            function switchTab(event, tabId) {
+                const headers = document.querySelectorAll('.tab-header');
+                const contents = document.querySelectorAll('.tab-content');
+                headers.forEach(h => h.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                event.currentTarget.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            }
+
+            function toggleOption(isOneTime) {
+                const optOneTime = document.getElementById('option-one-time');
+                const optSubscribe = document.getElementById('option-subscribe');
+                if (isOneTime) {
+                    optOneTime.classList.add('active');
+                    optSubscribe.classList.remove('active');
+                } else {
+                    optOneTime.classList.remove('active');
+                    optSubscribe.classList.add('active');
+                }
+            }
+
+            function increaseQty() {
+                const qtyVal = document.getElementById('qty-number');
+                let current = parseInt(qtyVal.innerText);
+                qtyVal.innerText = current + 1;
+            }
+
+            function decreaseQty() {
+                const qtyVal = document.getElementById('qty-number');
+                let current = parseInt(qtyVal.innerText);
+                if (current > 1) {
+                    qtyVal.innerText = current - 1;
+                }
+            }
+
+            function changeImage(index) {
+                const thumbs = document.querySelectorAll('.thumbnail');
+                thumbs.forEach((t, i) => {
+                    if (i === index) t.classList.add('active');
+                    else t.classList.remove('active');
+                });
+            }
+        </script>
+
+        <!-- Recommended Products -->
+        <section class="recommendations-section container">
+            <h2 class="recommendations-title">You might also like</h2>
+            <div class="recommendations-grid">
+                <!-- Card 1: OPULENT -->
+                <div class="product-card">
+                    <div class="card-image-box">
+                        <img src="images/product-1.png" alt="Opulent Protect Bottle" class="card-image">
+                    </div>
+                    <div class="card-info-box">
+                        <h3 class="card-product-title">OPULENT</h3>
+                        <div class="card-price-row">
+                            <span class="card-old-price">$25</span>
+                            <span class="card-current-price">$19</span>
+                        </div>
+                        <div class="card-rating-row">
+                            <span class="card-stars">★★★★★</span>
+                            <span class="card-score">5.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: GRACE -->
+                <div class="product-card">
+                    <div class="card-image-box">
+                        <img src="images/product-2.png" alt="Grace Face Cream Jar" class="card-image">
+                    </div>
+                    <div class="card-info-box">
+                        <h3 class="card-product-title">GRACE</h3>
+                        <div class="card-price-row">
+                            <span class="card-current-price">$13</span>
+                        </div>
+                        <div class="card-rating-row">
+                            <span class="card-stars">★★★★☆</span>
+                            <span class="card-score">4.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: VELVET -->
+                <div class="product-card">
+                    <div class="card-image-box">
+                        <img src="images/product-3.png" alt="Velvet Protect Bottle" class="card-image">
+                    </div>
+                    <div class="card-info-box">
+                        <h3 class="card-product-title">VELVET</h3>
+                        <div class="card-price-row">
+                            <span class="card-old-price">$30</span>
+                            <span class="card-current-price">$23</span>
+                        </div>
+                        <div class="card-rating-row">
+                            <span class="card-stars">★★★★☆</span>
+                            <span class="card-score">4.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: IRIDESCENT -->
+                <div class="product-card">
+                    <div class="card-image-box">
+                        <img src="images/product-4.png" alt="Iridescent Protect Bottle" class="card-image">
+                    </div>
+                    <div class="card-info-box">
+                        <h3 class="card-product-title">IRIDESCENT</h3>
+                        <div class="card-price-row">
+                            <span class="card-current-price">$25.9</span>
+                        </div>
+                        <div class="card-rating-row">
+                            <span class="card-stars">★★★★☆</span>
+                            <span class="card-score">4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendations-footer">
+                <button class="btn-more-products" type="button">
+                    <span>More products</span>
+                    <svg class="more-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M1.99974 13.0001L1.9996 11.0002L18.1715 11.0002L14.2218 7.05044L15.636 5.63623L22 12.0002L15.636 18.3642L14.2218 16.9499L18.1716 13.0002L1.99974 13.0001Z"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Subscribe Section -->
+        <section class="subscribe-section">
+            <div class="container subscribe-inner">
+                <h2 class="subscribe-title">Subscribe to get 10% off<br>your first order</h2>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Drop your email here" class="subscribe-input">
+                    <button type="button" class="subscribe-btn" aria-label="Submit email">
+                        <svg class="subscribe-arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M1.99974 13.0001L1.9996 11.0002L18.1715 11.0002L14.2218 7.05044L15.636 5.63623L22 12.0002L15.636 18.3642L14.2218 16.9499L18.1716 13.0002L1.99974 13.0001Z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="container footer-columns">
+                <!-- Column 1: Brand & Info -->
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-title">VELVETY</span>
+                        <span class="logo-subtitle">Touch of elegance</span>
+                    </a>
+                    <div class="opening-hours-box">
+                        <h4 class="footer-col-label">Opening hours</h4>
+                        <p class="opening-hours-text">Monday to Saturday:<br>10:30 a.m. to 7 p.m.</p>
+                    </div>
+                    <div class="social-links">
+                        <!-- Instagram icon (inline) -->
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <!-- Twitter icon (inline) -->
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.3499 5.55005C13.7681 5.55005 12.4786 6.81809 12.4504 8.39658L12.4223 9.97162C12.4164 10.3029 12.143 10.5667 11.8117 10.5608C11.7881 10.5604 11.7646 10.5586 11.7413 10.5554L10.1805 10.3426C8.12699 10.0625 6.15883 9.11736 4.27072 7.54411C3.67275 10.8538 4.84 13.1472 7.65342 14.916L9.40041 16.0142C9.68095 16.1906 9.7654 16.561 9.58903 16.8415C9.54861 16.9058 9.49636 16.9619 9.43504 17.0067L7.84338 18.1696C8.78973 18.229 9.68938 18.1875 10.435 18.0387C15.1526 17.0973 18.2897 13.547 18.2897 7.69109C18.2897 7.213 17.2774 5.55005 15.3499 5.55005ZM10.4507 8.3609C10.4983 5.69584 12.6735 3.55005 15.3499 3.55005C16.7132 3.55005 17.9465 4.10683 18.8348 5.0054C19.5462 5.00005 20.1514 5.17991 21.5035 4.35967C21.1693 6.00005 21.0034 6.71201 20.2897 7.69109C20.2897 15.3326 15.5926 19.0489 10.8264 20C7.5587 20.6522 2.80646 19.5815 1.44531 18.1587C2.13874 18.1054 4.95928 17.802 6.58895 16.6092C5.20994 15.6987 -0.278631 12.4681 3.32772 3.78642C5.02119 5.76307 6.73797 7.10855 8.47807 7.82286C9.63548 8.29798 9.91978 8.2885 10.4507 8.3609Z"></path>
+                            </svg>
+                        </a>
+                        <!-- Facebook icon (inline) -->
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 19H19V5H5V19H12V14H10V12H12V10.3458C12 9.00855 12.1392 8.52362 12.4007 8.03473C12.6622 7.54584 13.0458 7.16216 13.5347 6.9007C13.9174 6.69604 14.3922 6.57252 15.2217 6.51954C15.551 6.49851 15.9771 6.52533 16.5 6.6V8.5H16C15.0827 8.5 14.7042 8.54332 14.4779 8.66433C14.3376 8.73939 14.2394 8.83758 14.1643 8.97793C14.0433 9.20418 14 9.42853 14 10.3458V12H16.5L16 14H14V19ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Shop Links -->
+                <div class="footer-col link-col">
+                    <h3 class="footer-title">Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Skincare</a></li>
+                        <li><a href="#" class="footer-link">Facial</a></li>
+                        <li><a href="#" class="footer-link">Soap</a></li>
+                        <li><a href="#" class="footer-link">Candles</a></li>
+                        <li><a href="#" class="footer-link">Auto Fragrances</a></li>
+                        <li><a href="#" class="footer-link">Gifts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Help Desk Links -->
+                <div class="footer-col link-col">
+                    <h3 class="footer-title">Help Desk</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Chat</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Policies</a></li>
+                        <li><a href="#" class="footer-link">Accessibility</a></li>
+                        <li><a href="#" class="footer-link">My Account</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stores Links -->
+                <div class="footer-col link-col">
+                    <h3 class="footer-title">Stores</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Manhattan</a></li>
+                        <li><a href="#" class="footer-link">Brooklyn</a></li>
+                        <li><a href="#" class="footer-link">Tokyo</a></li>
+                        <li><a href="#" class="footer-link">Jakarta</a></li>
+                        <li><a href="#" class="footer-link">Paris</a></li>
+                        <li><a href="#" class="footer-link">Buenos Aires</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Copyright & Legal Links -->
+            <div class="footer-bottom">
+                <div class="container footer-bottom-inner">
+                    <p class="copyright-text">&copy; Designed by DhuhaCreative. Powered by UI8.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="bottom-link">Licenses</a>
+                        <a href="#" class="bottom-link">Privacy</a>
+                        <a href="#" class="bottom-link">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

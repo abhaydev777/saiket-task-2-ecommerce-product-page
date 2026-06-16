@@ -26,7 +26,7 @@
 }
 
 body {
-    background-image: url('../images/background-leaves.png');
+    background-image: url('../assets/background-leaves.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
